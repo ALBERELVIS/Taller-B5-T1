@@ -1,0 +1,34 @@
+# Taller B5-T1 - Generacion de datos financieros sinteticos
+#
+# Instalacion:
+#     pip install -r requirements.txt
+#
+# Nota sobre el backend de Keras
+# ------------------------------
+# El proyecto usa Keras 3 sobre PyTorch (KERAS_BACKEND=torch, fijado
+# automaticamente en src/keras_setup.py). No hace falta TensorFlow. Si se
+# dispone de GPU NVIDIA, instalar torch con soporte CUDA acelera los
+# entrenamientos entre 5 y 10 veces:
+#     pip install torch --index-url https://download.pytorch.org/whl/cu124
+
+numpy>=2.0
+pandas>=2.2
+scipy>=1.13
+scikit-learn>=1.5
+statsmodels>=0.14      # tests estadísticos financieros (ARCH-LB, ADF)
+matplotlib>=3.8
+pyarrow>=15.0          # cache de precios en parquet
+
+keras>=3.5
+torch>=2.4
+
+yfinance>=0.2.40       # descarga de precios del S&P 500
+
+# Notebooks
+notebook>=7.0
+ipython>=8.0
+
+# Bonus cuantico (notebook 06). Es opcional: src/generators/quantum.py lo
+# instala solo la primera vez que se usa, para que el resto del proyecto no
+# arrastre la dependencia.
+# pennylane>=0.37
